@@ -1,0 +1,1 @@
+//! `change_history` — reserved. per-file change records with before/after digests and a verifier of a tree against its recorded changes, the change layer of task_history. This 0.0.1 holds the name; the first working release follows.

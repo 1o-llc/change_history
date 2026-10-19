@@ -1,0 +1,11 @@
+[package]
+name = "change_history"
+version = "0.0.1"
+edition = "2021"
+rust-version = "1.56"
+authors = ["James Hunt <james@1o.business>"]
+license = "MIT OR Apache-2.0"
+description = "Reserved: per-file change records with before/after digests and a verifier of a tree against its recorded changes, the change layer of task_history. The first working release follows; nothing in 0.0.1 is usable yet."
+repository = "https://github.com/1o-llc/change_history"
+keywords = ["1o", "history", "changes"]
+categories = ["development-tools"]
