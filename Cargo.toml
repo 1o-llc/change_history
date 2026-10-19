@@ -1,11 +1,27 @@
 [package]
 name = "change_history"
-version = "0.0.1"
+version = "0.1.0"
 edition = "2021"
-rust-version = "1.56"
+rust-version = "1.89"
 authors = ["James Hunt <james@1o.business>"]
 license = "MIT OR Apache-2.0"
-description = "Reserved: per-file change records with before/after digests and a verifier of a tree against its recorded changes, the change layer of task_history. The first working release follows; nothing in 0.0.1 is usable yet."
+description = "What each job changed: the lines it touched per step and for the job (from the counts it took at open and close), summed across jobs, and the change records its revision carries (path, operation, digests before and after), two jobs side by side"
 repository = "https://github.com/1o-llc/change_history"
-keywords = ["1o", "history", "changes"]
+readme = "README.md"
+keywords = ["1o", "history", "changes", "lines", "jobs"]
 categories = ["development-tools"]
+include = ["src/**", "tests/**", "Cargo.toml", "LICENSE*", "README*", "CHANGELOG*"]
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+# the records a change is written as
+task_history = "0.1.0"
+# the revision a job writes its changes into
+revision_history = "0.1.0"
+# the counts and count diffs lines touched are read from
+tree_history = "0.1.0"
+# files written whole
+receipt_history = "0.1.0"
+# refusal codes
+liaise = "0.2.4"
